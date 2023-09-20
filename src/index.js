@@ -24,11 +24,11 @@ app.use('/product',productController); //product/:cat for the catogery of the pr
 
 app.use('/user',userController);
 
-app.listen(process.env.PORT || 2400, '0.0.0.0'
+app.listen(process.env.PORT || 3000, '0.0.0.0'
 ,async ()=>{
     try{
          await connect();
-         console.log('listening on the port 2400');
+         console.log('listening on the port 3000');
     }catch(err){
         console.log(err.message);
     }

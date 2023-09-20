@@ -7,7 +7,7 @@ async function getData(val, page = 1) {
 
     console.log(val);
     try {
-        let res = await fetch(`http://localhost:2400/product/?catogery=${val}&page=${page}`);
+        let res = await fetch(`http://localhost:3000/product/?catogery=${val}&page=${page}`);
         let data = await res.json();
         showData(data);
         localStorage.setItem('vai_searchData', JSON.stringify(data));
@@ -102,7 +102,7 @@ async function filter() {
     }
     console.log(brand);
 
-    let response = await fetch(`http://localhost:2400/product/filter?Brand=${brand}`);
+    let response = await fetch(`http://localhost:3000/product/filter?Brand=${brand}`);
 
     let data = await response.json();
 
