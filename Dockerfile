@@ -1,6 +1,6 @@
 FROM node:16-alpine
-WORKDIR  /var/lib/jenkins/workspace/piyushscript
+WORKDIR ./
 COPY . .
 RUN npm install
-EXPOSE 3000
+EXPOSE 8080
 CMD [ "npm", "start" ]
