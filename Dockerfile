@@ -1,5 +1,5 @@
 FROM node:16-alpine
-WORKDIR  /
+WORKDIR  /var/lib/jenkins/workspace/piyushscript
 COPY . .
 RUN npm install
 EXPOSE 8080
