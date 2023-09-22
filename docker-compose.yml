@@ -1,7 +1,7 @@
 version : "3.3"
 services :
  web :
-    image: piyushsharma8860/piyushscript:latest
-   # //build : .
+   #  image: piyushsharma8860/piyushscript:latest
+   build : .
    ports :
       - "3000:3000"
