@@ -4,7 +4,7 @@ const cors = require('cors')
 require("dotenv").config();
 const app=express();
 
-//const connect=require('./config/db');
+const connect=require('./config/db');
 
 
 const productController=require('./controller/product.controller');
@@ -27,7 +27,7 @@ app.use('/user',userController);
 app.listen(process.env.PORT || 3000, '0.0.0.0'
 ,async ()=>{
     try{
-        // await connect();
+         await connect();
          console.log('listening on the port 3000');
     }catch(err){
         console.log(err.message);
