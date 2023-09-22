@@ -1,14 +1,14 @@
 const express = require("express");
 
-const User = require("../model/user.model");
+//const User = require("../model/user.model");
 
 const router = express.Router();
 
 router.post("", async (req, res) => {
   try {
-    const user = await User.create(req.body);
+    //const user = await User.create(req.body);
 
-    return res.status(201).send(user);
+    //return res.status(201).send(user);
   } catch (er) {
     return res.status(500).send(er.message);
   }
@@ -16,9 +16,9 @@ router.post("", async (req, res) => {
 
 router.get("", async (req, res) => {
   try {
-    const user = await User.find().lean().exec();
+    // const user = await User.find().lean().exec();
 
-    return res.status(201).send(user);
+    // return res.status(201).send(user);
   } catch (er) {
     return res.status(500).send(er.message);
   }
